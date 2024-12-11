@@ -1,0 +1,8 @@
+BIST 100, Alis: 1.4597
+USD, Alis: 32.4974
+EUR, Alis: 34.3342
+ALT (gr), Alis: 2765.65
+GMS (gr), Alis: 32.3238
+PLT (gr), Alis: 971.44
+Çeyrek, Alis: 4458.85
+EUR/USD, Alis: 1.0459
