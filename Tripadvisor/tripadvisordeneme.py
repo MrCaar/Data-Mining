@@ -8,9 +8,9 @@ import time
 import os
 
 driver = uc.Chrome()
-url = "https://www.tripadvisor.com/Hotel_Review-g297977-d12282029-Reviews-Movenpick_Bursa_Hotel_and_Thermal_Spa-Bursa.html"
+url = "https://www.tripadvisor.com/Attraction_Review-g297977-d307844-Reviews-Green_Mosque-Bursa.html"
 driver.get(url)
-foldername = "MovenpickBursaHotelandTermalSpaBursa"
+foldername = "greencami"
 
 try:
     button = driver.find_element(By.CLASS_NAME, "UikNM _G B- _S _W _T c G_ wSSLS wnNQG")
@@ -31,15 +31,15 @@ def yorumaltadv():
         for div in divs:
             try:
                 # kullanici adini bul
-                kullaniciad_div = div.find("div", {"class": "zpDvc Zb"})
+                kullaniciad_div = div.find("span", {"class": "biGQs _P fiohW fOtGX"})
                 kullaniciad = kullaniciad_div.text.strip() if kullaniciad_div else "Kullanıcı Adı Bulunamadı"
 
                 # gonderi tarihi
-                tarih_div = div.find("div", {"class": "biGQs _P pZUbB ncFvv osNWb"})
+                tarih_div = div.find("div", {"class": "RpeCd"})
                 tarih = tarih_div.text.strip() if tarih_div else "Tarih Bulunamadı"
 
                 # puani
-                score_div = div.find("title", {"id": ":lithium-rb8:"})
+                score_div = div.find("svg", {"class": "UctUV d H0"})
                 score = score_div.text.strip() if score_div else "Score Bulunamadı"
 
                 # yorum basligi
